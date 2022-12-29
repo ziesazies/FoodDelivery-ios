@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01B72EB3295D92F5007E9C05 /* Ftux.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B72EB2295D92F5007E9C05 /* Ftux.swift */; };
+		01B72EB7295D93AC007E9C05 /* FtuxProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B72EB6295D93AC007E9C05 /* FtuxProvider.swift */; };
+		01B72EB9295D99DF007E9C05 /* FtuxViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B72EB8295D99DF007E9C05 /* FtuxViewCell.swift */; };
 		01EE9B63295C70890040D4F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EE9B62295C70890040D4F8 /* AppDelegate.swift */; };
 		01EE9B65295C70890040D4F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EE9B64295C70890040D4F8 /* SceneDelegate.swift */; };
 		01EE9B6C295C708B0040D4F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01EE9B6B295C708B0040D4F8 /* Assets.xcassets */; };
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01B72EB2295D92F5007E9C05 /* Ftux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ftux.swift; sourceTree = "<group>"; };
+		01B72EB6295D93AC007E9C05 /* FtuxProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FtuxProvider.swift; sourceTree = "<group>"; };
+		01B72EB8295D99DF007E9C05 /* FtuxViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FtuxViewCell.swift; sourceTree = "<group>"; };
 		01EE9B5F295C70890040D4F8 /* FoodDelivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDelivery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01EE9B62295C70890040D4F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01EE9B64295C70890040D4F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +82,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01B72EB1295D92E3007E9C05 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				01B72EB2295D92F5007E9C05 /* Ftux.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		01B72EB4295D9389007E9C05 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				01B72EB6295D93AC007E9C05 /* FtuxProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
 		01EE9B56295C70880040D4F8 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +121,8 @@
 		01EE9B61295C70890040D4F8 /* FoodDelivery */ = {
 			isa = PBXGroup;
 			children = (
+				01B72EB4295D9389007E9C05 /* Providers */,
+				01B72EB1295D92E3007E9C05 /* Models */,
 				01EE9B92295C739F0040D4F8 /* Module */,
 				01EE9B62295C70890040D4F8 /* AppDelegate.swift */,
 				01EE9B64295C70890040D4F8 /* SceneDelegate.swift */,
@@ -139,6 +163,7 @@
 			children = (
 				01EE9B94295C73CE0040D4F8 /* Ftux.storyboard */,
 				01EE9B96295C9B080040D4F8 /* FtuxViewController.swift */,
+				01B72EB8295D99DF007E9C05 /* FtuxViewCell.swift */,
 			);
 			path = Ftux;
 			sourceTree = "<group>";
@@ -274,8 +299,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01B72EB3295D92F5007E9C05 /* Ftux.swift in Sources */,
+				01B72EB9295D99DF007E9C05 /* FtuxViewCell.swift in Sources */,
 				01EE9B97295C9B080040D4F8 /* FtuxViewController.swift in Sources */,
 				01EE9B63295C70890040D4F8 /* AppDelegate.swift in Sources */,
+				01B72EB7295D93AC007E9C05 /* FtuxProvider.swift in Sources */,
 				01EE9B65295C70890040D4F8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
