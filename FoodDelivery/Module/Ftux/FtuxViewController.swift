@@ -8,26 +8,54 @@
 import UIKit
 
 class FtuxViewController: UIViewController {
-
+    
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var ftuxes: [Ftux] = []
+    
+    let viewModel = FtuxViewModel()
     
     // MARK: - Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         setup()
         
-        loadFtuxes()
-        
-        
+        observeError()
+        observeCurrentIndex()
+        viewModel.loadFtuxes()
     }
     
-    // MARK: - Helpers
+    func observeError() {
+        viewModel.error.bind { [weak self] (error) in
+            let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self?.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func observeCurrentIndex() {
+        viewModel.currentIndex.bind { [weak self] (index) in
+            guard let `self` = self else { return }
+            
+            switch index {
+            case -1:
+                break
+                
+            default:
+                if index == 0 {
+                    self.collectionView.reloadData()
+                }
+                self.goToPage(index)
+            }
+        }
+    }
+}
+
+// MARK: - Helpers
+extension FtuxViewController {
     func setup() {
         nextButton.layer.cornerRadius = 28
         nextButton.layer.masksToBounds = true
@@ -36,45 +64,81 @@ class FtuxViewController: UIViewController {
         collectionView.delegate = self
     }
     
+//    func asdf(result: Result<[Ftux], Error>) {
+//        guard let `self` = self else {
+//            return
+//        }
+//
+//        switch result {
+//        case .success(let data);
+//            self.ftuxes = data
+//            self.pageControl.numberOfPages = self.ftuxes.CountableRange
+//            self.updatePage(0)
+//
+//        case .failure(let error):
+//            print(error.localizedDescription)
+//        }
+//    }
+//
+//    func loadFtuxes() {
+//
+//        let completion: (Result<[Ftux], Error>) -> Void = { [weak self] (result) in
+//            guard let `self` = self else {
+//                return
+//            }
+//
+//            switch result {
+//            case .success(let data):
+//               self.ftuxes = data
+//                self.pageControl.numberOfPages = self.ftuxes.count
+//                self.updatePage(0)
+//
+//            case .failure(let error):
+//                print(error.localizedDescription)
+//
+//            }
+//        }
+//
+//        ftuxProvider.loadFtuxes(completion: completion)
+//
+//    }
+    
     func goToPage(_ page: Int) {
         collectionView.scrollToItem(at: IndexPath(item: page, section: 0), at: .centeredHorizontally
 , animated: true)
         updatePage(page)
     }
     
-    func loadFtuxes() {
-        ftuxes = FtuxProvider.shared.loadFtuxes()
-        pageControl.numberOfPages = ftuxes.count
-        updatePage(0)
-    }
     
     func updatePage(_ page: Int) {
         pageControl.currentPage = page
-        nextButton.setTitle(page == ftuxes.count - 1 ? "Let's begin": "Next", for: .normal)
+        nextButton.setTitle(viewModel.buttonTitleAtIndex(page), for: .normal)
     }
+}
     
-    // MARK: - Action
+// MARK: - Action
+extension FtuxViewController {
     @IBAction func nextButtonTapped(_ sender: Any) {
-        let toPage = min(ftuxes.count - 1, pageControl.currentPage + 1)
-        if toPage != pageControl.currentPage {
-            goToPage(toPage)
-        }
+        let toPage = min(viewModel.numberOfItems - 1, pageControl.currentPage + 1)
+//        if toPage != pageControl.currentPage {
+//            goToPage(toPage)
+//        }
+        viewModel.currentIndex.value = toPage
     }
 }
 
 // MARK: - UICollectionViewDataSource
 extension FtuxViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return ftuxes.count
+        return viewModel.numberOfItems
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ftux_cell", for: indexPath) as! FtuxViewCell
         
-        let ftux = self.ftuxes[indexPath.item]
-        cell.imageView.image = UIImage(named: ftux.image)
-        cell.titleLabel.text = ftux.title
-        cell.subtitleLabel.text = ftux.subtitle
+        cell.imageView.image = viewModel.imageAtIndex(indexPath.item)
+        cell.titleLabel.text = viewModel.titleAtIndex(indexPath.item)
+        cell.subtitleLabel.text = viewModel.subtitleAtIndex(indexPath.item)
         
         return cell
         
