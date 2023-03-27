@@ -44,6 +44,9 @@ class FtuxViewController: UIViewController {
             case -1:
                 break
                 
+            case self.viewModel.numberOfItems:
+                self.showLoginLandingViewController()
+                
             default:
                 if index == 0 {
                     self.collectionView.reloadData()
@@ -116,10 +119,10 @@ extension FtuxViewController {
     }
 }
     
-// MARK: - Action
+// MARK: - Actions
 extension FtuxViewController {
     @IBAction func nextButtonTapped(_ sender: Any) {
-        let toPage = min(viewModel.numberOfItems - 1, pageControl.currentPage + 1)
+        let toPage = min(viewModel.numberOfItems, pageControl.currentPage + 1)
 //        if toPage != pageControl.currentPage {
 //            goToPage(toPage)
 //        }

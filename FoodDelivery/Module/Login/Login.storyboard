@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login Landing View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="LoginLanding" id="Y6W-OH-hqX" customClass="LoginLandingViewController" customModule="FoodDelivery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discover the best foods from over 1,000 restaurants and fast delivery to your doorstep" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXe-I5-fKt">
+                                <rect key="frame" x="36" y="554" width="318" height="31.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                <color key="textColor" red="0.48627450979999998" green="0.49019607840000001" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODt-1i-HUY" customClass="FDSecondaryButton" customModule="FoodDelivery" customModuleProvider="target">
+                                <rect key="frame" x="36" y="718" width="318" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="S0q-Uc-MqC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Create an Account">
+                                    <color key="titleColor" name="Primary"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="28"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Cc-qS-lZy" customClass="FDPrimaryButton" customModule="FoodDelivery" customModuleProvider="target">
+                                <rect key="frame" x="36" y="642" width="318" height="56"/>
+                                <color key="backgroundColor" red="0.98823529409999999" green="0.37647058820000001" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="PBE-5C-tfd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="28"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="n0t-bd-6sO"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_login" translatesAutoresizingMaskIntoConstraints="NO" id="YSa-vJ-XKL">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="518"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="YSa-vJ-XKL" secondAttribute="height" multiplier="125:166" id="GRM-8j-Cbv"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YSa-vJ-XKL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="7Dq-yq-O2O"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="YSa-vJ-XKL" secondAttribute="trailing" id="7x1-em-EFt"/>
+                            <constraint firstItem="YSa-vJ-XKL" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Ffo-j4-MOj"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ODt-1i-HUY" secondAttribute="bottom" constant="36" id="KEm-yg-HEw"/>
+                            <constraint firstItem="mXe-I5-fKt" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="36" id="NHu-A3-QFY"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="mXe-I5-fKt" secondAttribute="trailing" constant="36" id="RDu-2U-DpM"/>
+                            <constraint firstItem="ODt-1i-HUY" firstAttribute="top" secondItem="9Cc-qS-lZy" secondAttribute="bottom" constant="20" id="SU3-5q-zd5"/>
+                            <constraint firstItem="ODt-1i-HUY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="36" id="SsL-tr-UwG"/>
+                            <constraint firstItem="mXe-I5-fKt" firstAttribute="top" secondItem="YSa-vJ-XKL" secondAttribute="bottom" constant="36" id="Ssy-W0-o7j"/>
+                            <constraint firstItem="9Cc-qS-lZy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="36" id="V6n-Ya-Hbj"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ODt-1i-HUY" secondAttribute="trailing" constant="36" id="bpP-4x-wvx"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="9Cc-qS-lZy" secondAttribute="trailing" constant="36" id="gXf-yu-2ui"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pbI-5I-Avb"/>
+                    <connections>
+                        <outlet property="loginButton" destination="9Cc-qS-lZy" id="PHs-xb-xxb"/>
+                        <outlet property="registerButton" destination="ODt-1i-HUY" id="6JF-Hj-ayc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1060" y="90.284360189573462"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="jan-NP-KAV">
+            <objects>
+                <viewController storyboardIdentifier="Login" id="5Vi-LH-FFF" customClass="LoginViewController" customModule="FoodDelivery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ydD-Py-Xah">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOGIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5R9-a4-1YA">
+                                <rect key="frame" x="150" y="67" width="90" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <color key="textColor" red="0.29019607843137252" green="0.29411764705882354" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your details to login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nxj-Oe-Dmg">
+                                <rect key="frame" x="114.66666666666669" y="119" width="161" height="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <color key="textColor" red="0.48627450980392156" green="0.49019607843137253" blue="0.49411764705882355" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PSE-g8-lGs" customClass="FDTextField" customModule="FoodDelivery" customModuleProvider="target">
+                                <rect key="frame" x="36" y="172" width="318" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="wUH-es-YO6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="28"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VbF-qp-Zc8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nxj-Oe-Dmg" firstAttribute="centerX" secondItem="ydD-Py-Xah" secondAttribute="centerX" id="AZa-G0-pZw"/>
+                            <constraint firstItem="PSE-g8-lGs" firstAttribute="top" secondItem="nxj-Oe-Dmg" secondAttribute="bottom" constant="36" id="L5G-WU-s0N"/>
+                            <constraint firstItem="5R9-a4-1YA" firstAttribute="top" secondItem="VbF-qp-Zc8" secondAttribute="top" constant="20" id="bdr-jP-GKG"/>
+                            <constraint firstItem="PSE-g8-lGs" firstAttribute="leading" secondItem="VbF-qp-Zc8" secondAttribute="leading" constant="36" id="kTv-tP-KbT"/>
+                            <constraint firstItem="nxj-Oe-Dmg" firstAttribute="top" secondItem="5R9-a4-1YA" secondAttribute="bottom" constant="16" id="ntC-Fh-gow"/>
+                            <constraint firstItem="5R9-a4-1YA" firstAttribute="centerX" secondItem="ydD-Py-Xah" secondAttribute="centerX" id="qoU-4c-eVH"/>
+                            <constraint firstItem="VbF-qp-Zc8" firstAttribute="trailing" secondItem="PSE-g8-lGs" secondAttribute="trailing" constant="36" id="zgw-JG-ReZ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gtp-Ru-mWU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1993.8461538461538" y="102.3696682464455"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="9Cc-qS-lZy">
+            <size key="intrinsicContentSize" width="42" height="32"/>
+        </designable>
+        <designable name="ODt-1i-HUY">
+            <size key="intrinsicContentSize" width="140" height="32"/>
+        </designable>
+        <designable name="PSE-g8-lGs">
+            <size key="intrinsicContentSize" width="107.66666666666667" height="18.666666666666668"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="img_login" width="375" height="498"/>
+        <namedColor name="Primary">
+            <color red="0.9882352941176471" green="0.37647058823529411" blue="0.066666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

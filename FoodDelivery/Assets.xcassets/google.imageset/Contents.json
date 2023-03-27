@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "logo_mealmonkey.png",
+      "filename" : "google-plus-logo.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "logo_mealmonkey@2x.png",
+      "filename" : "google-plus-logo@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "logo_mealmonkey@3x.png",
+      "filename" : "google-plus-logo@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

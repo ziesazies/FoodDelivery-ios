@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Live tracking vector.png",
+      "filename" : "img_ftux_3.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Live tracking vector@2x.png",
+      "filename" : "img_ftux_3@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Live tracking vector@3x.png",
+      "filename" : "img_ftux_3@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

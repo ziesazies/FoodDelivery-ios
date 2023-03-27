@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Find food you love vector.png",
+      "filename" : "img_ftux_1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Find food you love vector@2x.png",
+      "filename" : "img_ftux_1@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Find food you love vector@3x.png",
+      "filename" : "img_ftux_1@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

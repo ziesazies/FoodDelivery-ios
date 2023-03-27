@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Delivery vector.png",
+      "filename" : "img_ftux_2.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Delivery vector@2x.png",
+      "filename" : "img_ftux_2@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Delivery vector@3x.png",
+      "filename" : "img_ftux_2@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
