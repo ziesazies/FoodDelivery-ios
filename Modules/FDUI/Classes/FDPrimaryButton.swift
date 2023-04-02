@@ -1,6 +1,6 @@
 //
-//  FDSecondaryButton.swift
-//  FoodDelivery
+//  FDPrimaryButton.swift
+//  FDUI
 //
 //  Created by Alief Ahmad Azies on 27/03/23.
 //
@@ -8,21 +8,25 @@
 import UIKit
 
 @IBDesignable
-class FDSecondaryButton: UIButton {
-
-    @IBInspectable
-    var cornerRadius: CGFloat = 0 {
+public class FDPrimaryButton: UIButton {
+    @IBInspectable public var cornerRadius: CGFloat = 0 {
         didSet {
             update()
         }
     }
     
-    override func awakeFromNib() {
+    @IBInspectable public var color: UIColor = UIColor(rgb: 0xFC6011) {
+        didSet {
+            update()
+        }
+    }
+    
+    public override func awakeFromNib() {
         super.awakeFromNib()
         setup()
     }
     
-    override func prepareForInterfaceBuilder() {
+    public override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         setup()
     }
@@ -38,20 +42,15 @@ class FDSecondaryButton: UIButton {
     }
     
     func setup() {
-        backgroundColor = UIColor.clear
-        
-        setTitleColor(UIColor.primary, for: .normal)
+        setTitleColor(UIColor.white, for: .normal)
         titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
-        
         layer.masksToBounds = true
-        layer.borderWidth = 1
-        layer.borderColor = UIColor.primary.cgColor
         
         update()
     }
     
     func update() {
+        backgroundColor = color
         layer.cornerRadius = cornerRadius
     }
-    
 }

@@ -1,6 +1,6 @@
 //
 //  FDTextField.swift
-//  FoodDelivery
+//  FDUI
 //
 //  Created by Alief Ahmad Azies on 27/03/23.
 //
@@ -8,7 +8,7 @@
 import UIKit
 
 @IBDesignable
-class FDTextField: UITextField {
+public class FDTextField: UITextField {
     
     @IBInspectable
     var cornerRadius: CGFloat = 0 {
@@ -31,12 +31,12 @@ class FDTextField: UITextField {
         return bounds.inset(by: padding)
     }
     
-    override func awakeFromNib() {
+    public override func awakeFromNib() {
         super.awakeFromNib()
         setup()
     }
     
-    override func prepareForInterfaceBuilder() {
+    public override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         setup()
     }

@@ -16,9 +16,6 @@
 		01B72EB7295D93AC007E9C05 /* FtuxProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B72EB6295D93AC007E9C05 /* FtuxProvider.swift */; };
 		01B72EB9295D99DF007E9C05 /* FtuxViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B72EB8295D99DF007E9C05 /* FtuxViewCell.swift */; };
 		01BBCF472965AD4200D83211 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BBCF462965AD4200D83211 /* UIColorExtension.swift */; };
-		01C44AE629D136A6000B6FAF /* FDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C44AE529D136A6000B6FAF /* FDTextField.swift */; };
-		01C44AE829D1420C000B6FAF /* FDPrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C44AE729D1420C000B6FAF /* FDPrimaryButton.swift */; };
-		01C44AEA29D14224000B6FAF /* FDSecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C44AE929D14224000B6FAF /* FDSecondaryButton.swift */; };
 		01EE9B63295C70890040D4F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EE9B62295C70890040D4F8 /* AppDelegate.swift */; };
 		01EE9B65295C70890040D4F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EE9B64295C70890040D4F8 /* SceneDelegate.swift */; };
 		01EE9B6C295C708B0040D4F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01EE9B6B295C708B0040D4F8 /* Assets.xcassets */; };
@@ -57,9 +54,6 @@
 		01B72EB6295D93AC007E9C05 /* FtuxProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FtuxProvider.swift; sourceTree = "<group>"; };
 		01B72EB8295D99DF007E9C05 /* FtuxViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FtuxViewCell.swift; sourceTree = "<group>"; };
 		01BBCF462965AD4200D83211 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
-		01C44AE529D136A6000B6FAF /* FDTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDTextField.swift; sourceTree = "<group>"; };
-		01C44AE729D1420C000B6FAF /* FDPrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDPrimaryButton.swift; sourceTree = "<group>"; };
-		01C44AE929D14224000B6FAF /* FDSecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDSecondaryButton.swift; sourceTree = "<group>"; };
 		01EE9B5F295C70890040D4F8 /* FoodDelivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDelivery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01EE9B62295C70890040D4F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01EE9B64295C70890040D4F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,16 +129,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		01C44AE429D13664000B6FAF /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				01C44AE529D136A6000B6FAF /* FDTextField.swift */,
-				01C44AE729D1420C000B6FAF /* FDPrimaryButton.swift */,
-				01C44AE929D14224000B6FAF /* FDSecondaryButton.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		01EE9B56295C70880040D4F8 = {
 			isa = PBXGroup;
 			children = (
@@ -168,7 +152,6 @@
 		01EE9B61295C70890040D4F8 /* FoodDelivery */ = {
 			isa = PBXGroup;
 			children = (
-				01C44AE429D13664000B6FAF /* Views */,
 				01BBCF452965AD2E00D83211 /* Extensions */,
 				01B72EB4295D9389007E9C05 /* Providers */,
 				01B72EB1295D92E3007E9C05 /* Models */,
@@ -353,17 +336,14 @@
 			files = (
 				01B72EB3295D92F5007E9C05 /* Ftux.swift in Sources */,
 				013348FC295F2433007A2F89 /* FtuxViewModel.swift in Sources */,
-				01C44AEA29D14224000B6FAF /* FDSecondaryButton.swift in Sources */,
 				01B72EB9295D99DF007E9C05 /* FtuxViewCell.swift in Sources */,
 				013348FA295F1F36007A2F89 /* FDObservable.swift in Sources */,
 				01EE9B97295C9B080040D4F8 /* FtuxViewController.swift in Sources */,
 				01EE9B63295C70890040D4F8 /* AppDelegate.swift in Sources */,
 				01B72EB7295D93AC007E9C05 /* FtuxProvider.swift in Sources */,
-				01C44AE629D136A6000B6FAF /* FDTextField.swift in Sources */,
 				01BBCF472965AD4200D83211 /* UIColorExtension.swift in Sources */,
 				0183E9F12962CFCD0056F948 /* LoginLandingViewController.swift in Sources */,
 				01EE9B65295C70890040D4F8 /* SceneDelegate.swift in Sources */,
-				01C44AE829D1420C000B6FAF /* FDPrimaryButton.swift in Sources */,
 				011DD2D8296BF6E3000CC33F /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
