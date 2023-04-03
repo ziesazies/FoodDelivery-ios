@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FDUI
 
 class LoginLandingViewController: UIViewController {
     @IBOutlet weak var loginButton: FDPrimaryButton!

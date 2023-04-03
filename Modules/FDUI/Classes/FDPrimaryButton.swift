@@ -7,8 +7,8 @@
 
 import UIKit
 
-@IBDesignable
-public class FDPrimaryButton: UIButton {
+@IBDesignable public class FDPrimaryButton: UIButton {
+    
     @IBInspectable public var cornerRadius: CGFloat = 0 {
         didSet {
             update()

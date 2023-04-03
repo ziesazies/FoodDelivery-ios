@@ -7,8 +7,7 @@
 
 import UIKit
 
-@IBDesignable
-public class FDTextField: UITextField {
+@IBDesignable public class FDTextField: UITextField {
     
     @IBInspectable
     var cornerRadius: CGFloat = 0 {

@@ -7,8 +7,7 @@
 
 import UIKit
 
-@IBDesignable
-public class FDSecondaryButton: UIButton {
+@IBDesignable public class FDSecondaryButton: UIButton {
 
     @IBInspectable public var cornerRadius: CGFloat = 0 {
         didSet {
