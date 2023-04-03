@@ -29,6 +29,9 @@ class LoginLandingViewController: UIViewController {
     @IBAction func loginButtonTapped(_ sender: Any) {
         showLoginViewController()
     }
+    @IBAction func registerButtonTapped(_ sender: Any) {
+        showSignUpViewController()
+    }
 }
 
 // MARK: - UIViewController
@@ -40,7 +43,7 @@ extension UIViewController {
         let scenes = UIApplication.shared.connectedScenes
         let windowScene = scenes.first as! UIWindowScene
         let window = windowScene.windows.first!
-        let navigationController = UINavigationController(rootViewController: viewController)
+        let navigationController = FDNavigationController(rootViewController: viewController)
         navigationController.isNavigationBarHidden = true
         
         window.rootViewController = navigationController}
