@@ -12,7 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FDLoadingViewController" customModule="FDUI" customModuleProvider="target">
             <connections>
                 <outlet property="loadingView" destination="Lpo-ap-vEv" id="Mig-aw-DlR"/>
-                <outlet property="messageLabel" destination="NBc-dR-jUY" id="HN0-gx-KNn"/>
+                <outlet property="messageLabel" destination="NBc-dR-jUY" id="yNj-VT-xzN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -28,13 +28,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="M5M-xH-Fww">
-                                <rect key="frame" x="16" y="417" width="382" height="62"/>
+                                <rect key="frame" x="16" y="393.5" width="382" height="109"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BBQ-eO-3ig">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="37"/>
                                         <subviews>
                                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Lpo-ap-vEv">
                                                 <rect key="frame" x="172.5" y="0.0" width="37" height="37"/>
+                                                <color key="color" systemColor="systemBackgroundColor"/>
                                             </activityIndicatorView>
                                         </subviews>
                                         <constraints>
@@ -44,21 +45,23 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBc-dR-jUY">
-                                        <rect key="frame" x="0.0" y="45" width="382" height="17"/>
+                                        <rect key="frame" x="0.0" y="45" width="382" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="xCe-O1-qcI"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
-                                        <color key="textColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="M5M-xH-Fww" firstAttribute="leading" secondItem="gfy-T1-pSp" secondAttribute="leading" constant="16" id="NqP-uc-BAb"/>
-                            <constraint firstAttribute="trailing" secondItem="M5M-xH-Fww" secondAttribute="trailing" constant="16" id="vsB-Ij-W1A"/>
-                            <constraint firstItem="M5M-xH-Fww" firstAttribute="centerY" secondItem="gfy-T1-pSp" secondAttribute="centerY" id="yDb-1K-aX9"/>
+                            <constraint firstItem="M5M-xH-Fww" firstAttribute="centerX" secondItem="gfy-T1-pSp" secondAttribute="centerX" id="HR1-8Q-Rzl"/>
+                            <constraint firstItem="M5M-xH-Fww" firstAttribute="centerY" secondItem="gfy-T1-pSp" secondAttribute="centerY" id="dah-QJ-L10"/>
                         </constraints>
                     </view>
-                    <blurEffect style="regular"/>
+                    <blurEffect style="dark"/>
                 </visualEffectView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
