@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FDLoadingViewController" customModule="FDUI" customModuleProvider="target">
+            <connections>
+                <outlet property="loadingView" destination="Lpo-ap-vEv" id="Mig-aw-DlR"/>
+                <outlet property="messageLabel" destination="NBc-dR-jUY" id="HN0-gx-KNn"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z5g-ev-LDk">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gfy-T1-pSp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="M5M-xH-Fww">
+                                <rect key="frame" x="16" y="417" width="382" height="62"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BBQ-eO-3ig">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="37"/>
+                                        <subviews>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Lpo-ap-vEv">
+                                                <rect key="frame" x="172.5" y="0.0" width="37" height="37"/>
+                                            </activityIndicatorView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Lpo-ap-vEv" secondAttribute="bottom" id="8ll-CQ-thB"/>
+                                            <constraint firstItem="Lpo-ap-vEv" firstAttribute="centerX" secondItem="BBQ-eO-3ig" secondAttribute="centerX" id="K2f-z0-9I8"/>
+                                            <constraint firstItem="Lpo-ap-vEv" firstAttribute="top" secondItem="BBQ-eO-3ig" secondAttribute="top" id="nJB-d6-TPD"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBc-dR-jUY">
+                                        <rect key="frame" x="0.0" y="45" width="382" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                        <color key="textColor" systemColor="systemBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="M5M-xH-Fww" firstAttribute="leading" secondItem="gfy-T1-pSp" secondAttribute="leading" constant="16" id="NqP-uc-BAb"/>
+                            <constraint firstAttribute="trailing" secondItem="M5M-xH-Fww" secondAttribute="trailing" constant="16" id="vsB-Ij-W1A"/>
+                            <constraint firstItem="M5M-xH-Fww" firstAttribute="centerY" secondItem="gfy-T1-pSp" secondAttribute="centerY" id="yDb-1K-aX9"/>
+                        </constraints>
+                    </view>
+                    <blurEffect style="regular"/>
+                </visualEffectView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <constraints>
+                <constraint firstItem="Z5g-ev-LDk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="PcZ-gb-RUB"/>
+                <constraint firstItem="Z5g-ev-LDk" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="R9e-EK-j7s"/>
+                <constraint firstAttribute="bottom" secondItem="Z5g-ev-LDk" secondAttribute="bottom" id="ZZn-Mk-eEk"/>
+                <constraint firstItem="Z5g-ev-LDk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="a4J-es-Zzs"/>
+            </constraints>
+            <point key="canvasLocation" x="89.855072463768124" y="19.419642857142858"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
