@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FirebaseAuth
 
 class SignUpViewModel {
     let name: FDObservable<String?> = FDObservable<String?>(nil)
@@ -48,6 +49,18 @@ class SignUpViewModel {
         
         loadingMessage = "Please wait..."
         isLoading.value = true
+        
+        Auth.auth().createUser(withEmail: email, password: password) { [weak self] (result, error) in
+            guard let `self` = self else { return }
+            self.isLoading.value = false
+            
+            if let error = error {
+                self.error.value = error
+            }
+            else {
+                self.isSignUpSuccess.value = true
+            }
+        }
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
             self.isLoading.value = false

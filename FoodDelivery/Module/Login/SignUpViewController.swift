@@ -38,6 +38,7 @@ class SignUpViewController: UIViewController {
     
     func setup() {
         nameTextField.delegate = self
+        emailTextField.delegate = self
         passwordTextField.delegate = self
         phoneTextField.delegate = self
         addressTextField.delegate = self
