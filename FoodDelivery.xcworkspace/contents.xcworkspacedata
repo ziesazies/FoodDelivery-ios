@@ -8,9 +8,9 @@
       location = "container:FoodDelivery.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:FoodDelivery.xcodeproj">
+      location = "group:Pods/Pods.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Pods/Pods.xcodeproj">
+      location = "group:FoodDelivery.xcodeproj">
    </FileRef>
 </Workspace>

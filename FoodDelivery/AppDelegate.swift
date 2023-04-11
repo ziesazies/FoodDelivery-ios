@@ -7,16 +7,25 @@
 
 import UIKit
 import IQKeyboardManagerSwift
+import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
+    
+    // iOS below 13
+//    var window: UIWindow?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        FirebaseApp.configure()
         IQKeyboardManager.shared.enable = true
+        
+        
+        // iOS Below 13
+//        if Auth.auth().currentUser != nil {
+//            window?.rootViewController?.showHomeViewController()
+//        }
         
         return true
     }

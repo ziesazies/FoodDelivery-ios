@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -105,182 +105,205 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOGIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5R9-a4-1YA">
-                                <rect key="frame" x="150" y="67" width="90" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
-                                <color key="textColor" red="0.29019607843137252" green="0.29411764705882354" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your details to login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nxj-Oe-Dmg">
-                                <rect key="frame" x="115.00000000000001" y="119" width="160.33333333333337" height="17"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
-                                <color key="textColor" red="0.48627450980392156" green="0.49019607843137253" blue="0.49411764705882355" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PSE-g8-lGs" customClass="FDTextField" customModule="FDUI">
-                                <rect key="frame" x="36" y="172" width="318" height="56"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="wUH-es-YO6"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="28"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AhY-8l-FQn" customClass="FDTextField" customModule="FDUI">
-                                <rect key="frame" x="36" y="244" width="318" height="56"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="Qq9-XP-pif"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="28"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDr-yE-Ggs" customClass="FDPrimaryButton" customModule="FDUI">
-                                <rect key="frame" x="36" y="316" width="318" height="56"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="NMY-zU-F0o"/>
-                                </constraints>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Login"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="28"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                        <color key="value" red="0.91764706370000004" green="0.41568624970000001" blue="0.19215688110000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="loginButtonTapped:" destination="5Vi-LH-FFF" eventType="touchUpInside" id="RgX-ua-ZPg"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oIB-nX-Lwh">
-                                <rect key="frame" x="36" y="388" width="318" height="56"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="6Z2-xU-qeo"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Forgot your password">
-                                    <color key="titleColor" systemColor="systemGray2Color"/>
-                                </state>
-                                <connections>
-                                    <action selector="forgotPasswordButtonTapped:" destination="5Vi-LH-FFF" eventType="touchUpInside" id="uhg-GL-Wc6"/>
-                                </connections>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="NGB-Wu-lnX">
-                                <rect key="frame" x="89.666666666666686" y="765" width="211" height="29"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tZE-Gf-4Pt">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an Account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKX-0f-pev">
-                                        <rect key="frame" x="0.0" y="0.0" width="153" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fia-fz-8Pf">
-                                        <rect key="frame" x="157" y="0.0" width="54" height="29"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Sign Up">
-                                            <color key="titleColor" red="0.91764706370000004" green="0.41568624970000001" blue="0.19215688110000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="signUpButtonTapped:" destination="5Vi-LH-FFF" eventType="touchUpInside" id="0bR-W1-ovb"/>
-                                        </connections>
-                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VAG-bM-CbE">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="687"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOGIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5R9-a4-1YA">
+                                                <rect key="frame" x="150" y="20" width="90" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                                <color key="textColor" red="0.29019607843137252" green="0.29411764705882354" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your details to login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nxj-Oe-Dmg">
+                                                <rect key="frame" x="115.00000000000001" y="72" width="160.33333333333337" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                <color key="textColor" red="0.48627450980392156" green="0.49019607843137253" blue="0.49411764705882355" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PSE-g8-lGs" customClass="FDTextField" customModule="FDUI">
+                                                <rect key="frame" x="36" y="125" width="318" height="56"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="56" id="wUH-es-YO6"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="28"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AhY-8l-FQn" customClass="FDTextField" customModule="FDUI">
+                                                <rect key="frame" x="36" y="197" width="318" height="56"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="56" id="Qq9-XP-pif"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="28"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDr-yE-Ggs" customClass="FDPrimaryButton" customModule="FDUI">
+                                                <rect key="frame" x="36" y="269" width="318" height="56"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="56" id="NMY-zU-F0o"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Login"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="28"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                        <color key="value" red="0.91764706370000004" green="0.41568624970000001" blue="0.19215688110000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="loginButtonTapped:" destination="5Vi-LH-FFF" eventType="touchUpInside" id="RgX-ua-ZPg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oIB-nX-Lwh">
+                                                <rect key="frame" x="122.66666666666669" y="341" width="145" height="56"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="56" id="6Z2-xU-qeo"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Forgot your password">
+                                                    <color key="titleColor" systemColor="systemGray2Color"/>
+                                                </state>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or login with" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K74-Qc-XaE">
+                                                <rect key="frame" x="153" y="433" width="84" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                <color key="textColor" red="0.29019607843137252" green="0.29411764705882354" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="o5l-8w-2kL">
+                                                <rect key="frame" x="36" y="470" width="318" height="128"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLD-4P-caf" customClass="FDPrimaryButton" customModule="FDUI">
+                                                        <rect key="frame" x="0.0" y="0.0" width="318" height="56"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="56" id="NkM-bR-QXj"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="-16" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Login with Facebook" image="facebook"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                                <color key="value" red="0.21176470589999999" green="0.49803921569999998" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="28"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="loginFacebookButtonTapped:" destination="5Vi-LH-FFF" eventType="touchUpInside" id="6NP-b0-Ihs"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ye5-Un-zLY" customClass="FDPrimaryButton" customModule="FDUI">
+                                                        <rect key="frame" x="0.0" y="72" width="318" height="56"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="56" id="cGl-tJ-0Xl"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="-16" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Login with Google" image="google"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                                <color key="value" red="0.85882352939999995" green="0.2901960784" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="28"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="loginGoogleButtonTapped:" destination="5Vi-LH-FFF" eventType="touchUpInside" id="Ucr-4S-KxQ"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="NGB-Wu-lnX">
+                                                <rect key="frame" x="89.666666666666686" y="642" width="211" height="29"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an Account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKX-0f-pev">
+                                                        <rect key="frame" x="0.0" y="0.0" width="153" height="29"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fia-fz-8Pf">
+                                                        <rect key="frame" x="157" y="0.0" width="54" height="29"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Sign Up">
+                                                            <color key="titleColor" red="0.91764706370000004" green="0.41568624970000001" blue="0.19215688110000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="signUpButtonTapped:" destination="5Vi-LH-FFF" eventType="touchUpInside" id="0bR-W1-ovb"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="PSE-g8-lGs" firstAttribute="leading" secondItem="VAG-bM-CbE" secondAttribute="leading" constant="36" id="54E-h7-ryC"/>
+                                            <constraint firstItem="5R9-a4-1YA" firstAttribute="top" secondItem="VAG-bM-CbE" secondAttribute="top" constant="20" id="6Dg-qp-bbN"/>
+                                            <constraint firstItem="LDr-yE-Ggs" firstAttribute="top" secondItem="AhY-8l-FQn" secondAttribute="bottom" constant="16" id="7js-mu-Dkf"/>
+                                            <constraint firstAttribute="trailing" secondItem="AhY-8l-FQn" secondAttribute="trailing" constant="36" id="7xH-vM-9hn"/>
+                                            <constraint firstAttribute="bottom" secondItem="NGB-Wu-lnX" secondAttribute="bottom" constant="16" id="9yg-SV-I3h"/>
+                                            <constraint firstAttribute="trailing" secondItem="PSE-g8-lGs" secondAttribute="trailing" constant="36" id="A08-EB-Qs7"/>
+                                            <constraint firstItem="NGB-Wu-lnX" firstAttribute="top" secondItem="o5l-8w-2kL" secondAttribute="bottom" constant="44" id="IhB-Qg-j0p"/>
+                                            <constraint firstItem="NGB-Wu-lnX" firstAttribute="centerX" secondItem="VAG-bM-CbE" secondAttribute="centerX" id="Nxc-oh-36T"/>
+                                            <constraint firstItem="LDr-yE-Ggs" firstAttribute="leading" secondItem="VAG-bM-CbE" secondAttribute="leading" constant="36" id="QVf-VH-4vB"/>
+                                            <constraint firstItem="o5l-8w-2kL" firstAttribute="top" secondItem="K74-Qc-XaE" secondAttribute="bottom" constant="20" id="S7t-3H-3bU"/>
+                                            <constraint firstItem="K74-Qc-XaE" firstAttribute="centerX" secondItem="VAG-bM-CbE" secondAttribute="centerX" id="TYJ-Z7-QX7"/>
+                                            <constraint firstItem="K74-Qc-XaE" firstAttribute="top" secondItem="oIB-nX-Lwh" secondAttribute="bottom" constant="36" id="Tgk-OU-OnR"/>
+                                            <constraint firstItem="K74-Qc-XaE" firstAttribute="centerX" secondItem="VAG-bM-CbE" secondAttribute="centerX" id="Uds-V1-JvA"/>
+                                            <constraint firstItem="o5l-8w-2kL" firstAttribute="leading" secondItem="VAG-bM-CbE" secondAttribute="leading" constant="36" id="VGa-jV-kgv"/>
+                                            <constraint firstItem="5R9-a4-1YA" firstAttribute="centerX" secondItem="VAG-bM-CbE" secondAttribute="centerX" id="W66-pO-HHV"/>
+                                            <constraint firstItem="oIB-nX-Lwh" firstAttribute="centerX" secondItem="VAG-bM-CbE" secondAttribute="centerX" id="YDw-eG-46m"/>
+                                            <constraint firstAttribute="trailing" secondItem="o5l-8w-2kL" secondAttribute="trailing" constant="36" id="dDO-I2-3Aj"/>
+                                            <constraint firstItem="PSE-g8-lGs" firstAttribute="top" secondItem="nxj-Oe-Dmg" secondAttribute="bottom" constant="36" id="ek2-XD-FzA"/>
+                                            <constraint firstItem="AhY-8l-FQn" firstAttribute="top" secondItem="PSE-g8-lGs" secondAttribute="bottom" constant="16" id="ggn-OU-3Ks"/>
+                                            <constraint firstItem="nxj-Oe-Dmg" firstAttribute="top" secondItem="5R9-a4-1YA" secondAttribute="bottom" constant="16" id="kHs-6p-t06"/>
+                                            <constraint firstItem="oIB-nX-Lwh" firstAttribute="top" secondItem="LDr-yE-Ggs" secondAttribute="bottom" constant="16" id="nU2-ge-mYc"/>
+                                            <constraint firstItem="nxj-Oe-Dmg" firstAttribute="centerX" secondItem="VAG-bM-CbE" secondAttribute="centerX" id="oPW-bh-9x9"/>
+                                            <constraint firstItem="AhY-8l-FQn" firstAttribute="leading" secondItem="VAG-bM-CbE" secondAttribute="leading" constant="36" id="w92-eD-A6O"/>
+                                            <constraint firstAttribute="trailing" secondItem="LDr-yE-Ggs" secondAttribute="trailing" constant="36" id="yXp-fh-ciE"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or login with" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K74-Qc-XaE">
-                                <rect key="frame" x="153" y="480" width="84" height="17"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLD-4P-caf" customClass="FDPrimaryButton" customModule="FDUI">
-                                <rect key="frame" x="36" y="513" width="318" height="56"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="NkM-bR-QXj"/>
+                                    <constraint firstItem="VAG-bM-CbE" firstAttribute="width" secondItem="tZE-Gf-4Pt" secondAttribute="width" id="IRD-Qk-ckm"/>
+                                    <constraint firstItem="VAG-bM-CbE" firstAttribute="leading" secondItem="tZE-Gf-4Pt" secondAttribute="leading" id="T7M-mg-aZC"/>
+                                    <constraint firstItem="VAG-bM-CbE" firstAttribute="top" secondItem="tZE-Gf-4Pt" secondAttribute="top" id="Tyv-3h-k64"/>
+                                    <constraint firstAttribute="trailing" secondItem="VAG-bM-CbE" secondAttribute="trailing" id="gze-bA-Igx"/>
+                                    <constraint firstAttribute="bottom" secondItem="VAG-bM-CbE" secondAttribute="bottom" id="oJp-RC-i9P"/>
                                 </constraints>
-                                <inset key="imageEdgeInsets" minX="-16" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Login with Facebook" image="facebook"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                        <color key="value" red="0.21176470589999999" green="0.49803921569999998" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="28"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="loginFacebookButtonTapped:" destination="5Vi-LH-FFF" eventType="touchUpInside" id="6NP-b0-Ihs"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ye5-Un-zLY" customClass="FDPrimaryButton" customModule="FDUI">
-                                <rect key="frame" x="36" y="585" width="318" height="56"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="cGl-tJ-0Xl"/>
-                                </constraints>
-                                <inset key="imageEdgeInsets" minX="-16" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Login with Google" image="google"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                        <color key="value" red="0.85882352939999995" green="0.2901960784" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="28"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="loginGoogleButtonTapped:" destination="5Vi-LH-FFF" eventType="touchUpInside" id="Ucr-4S-KxQ"/>
-                                </connections>
-                            </button>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VbF-qp-Zc8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="VbF-qp-Zc8" firstAttribute="trailing" secondItem="lLD-4P-caf" secondAttribute="trailing" constant="36" id="6ux-dS-xds"/>
-                            <constraint firstItem="K74-Qc-XaE" firstAttribute="centerX" secondItem="ydD-Py-Xah" secondAttribute="centerX" id="9aZ-hD-0Qn"/>
-                            <constraint firstItem="nxj-Oe-Dmg" firstAttribute="centerX" secondItem="ydD-Py-Xah" secondAttribute="centerX" id="AZa-G0-pZw"/>
-                            <constraint firstItem="VbF-qp-Zc8" firstAttribute="bottom" secondItem="NGB-Wu-lnX" secondAttribute="bottom" constant="16" id="Ek3-U8-tk6"/>
-                            <constraint firstItem="PSE-g8-lGs" firstAttribute="top" secondItem="nxj-Oe-Dmg" secondAttribute="bottom" constant="36" id="L5G-WU-s0N"/>
-                            <constraint firstItem="VbF-qp-Zc8" firstAttribute="trailing" secondItem="AhY-8l-FQn" secondAttribute="trailing" constant="36" id="N3G-bv-cXh"/>
-                            <constraint firstItem="LDr-yE-Ggs" firstAttribute="leading" secondItem="VbF-qp-Zc8" secondAttribute="leading" constant="36" id="N4T-mH-CwO"/>
-                            <constraint firstItem="lLD-4P-caf" firstAttribute="top" secondItem="K74-Qc-XaE" secondAttribute="bottom" constant="16" id="NOd-bc-da8"/>
-                            <constraint firstItem="VbF-qp-Zc8" firstAttribute="trailing" secondItem="Ye5-Un-zLY" secondAttribute="trailing" constant="36" id="NYc-5q-sPe"/>
-                            <constraint firstItem="VbF-qp-Zc8" firstAttribute="trailing" secondItem="oIB-nX-Lwh" secondAttribute="trailing" constant="36" id="Rfr-ZF-9EZ"/>
-                            <constraint firstItem="lLD-4P-caf" firstAttribute="leading" secondItem="VbF-qp-Zc8" secondAttribute="leading" constant="36" id="SlA-5l-zjC"/>
-                            <constraint firstItem="VbF-qp-Zc8" firstAttribute="trailing" secondItem="LDr-yE-Ggs" secondAttribute="trailing" constant="36" id="XVT-P1-1No"/>
-                            <constraint firstItem="oIB-nX-Lwh" firstAttribute="top" secondItem="LDr-yE-Ggs" secondAttribute="bottom" constant="16" id="Yba-Pz-WXJ"/>
-                            <constraint firstItem="5R9-a4-1YA" firstAttribute="top" secondItem="VbF-qp-Zc8" secondAttribute="top" constant="20" id="bdr-jP-GKG"/>
-                            <constraint firstItem="K74-Qc-XaE" firstAttribute="top" secondItem="oIB-nX-Lwh" secondAttribute="bottom" constant="36" id="gQD-Pi-YrF"/>
-                            <constraint firstItem="LDr-yE-Ggs" firstAttribute="top" secondItem="AhY-8l-FQn" secondAttribute="bottom" constant="16" id="gdB-H2-ipU"/>
-                            <constraint firstItem="AhY-8l-FQn" firstAttribute="top" secondItem="PSE-g8-lGs" secondAttribute="bottom" constant="16" id="hbZ-xJ-6Y6"/>
-                            <constraint firstItem="PSE-g8-lGs" firstAttribute="leading" secondItem="VbF-qp-Zc8" secondAttribute="leading" constant="36" id="kTv-tP-KbT"/>
-                            <constraint firstItem="NGB-Wu-lnX" firstAttribute="centerX" secondItem="ydD-Py-Xah" secondAttribute="centerX" id="ma5-NC-b00"/>
-                            <constraint firstItem="nxj-Oe-Dmg" firstAttribute="top" secondItem="5R9-a4-1YA" secondAttribute="bottom" constant="16" id="ntC-Fh-gow"/>
-                            <constraint firstItem="oIB-nX-Lwh" firstAttribute="leading" secondItem="VbF-qp-Zc8" secondAttribute="leading" constant="36" id="odf-Wn-l3t"/>
-                            <constraint firstItem="5R9-a4-1YA" firstAttribute="centerX" secondItem="ydD-Py-Xah" secondAttribute="centerX" id="qoU-4c-eVH"/>
-                            <constraint firstItem="Ye5-Un-zLY" firstAttribute="leading" secondItem="VbF-qp-Zc8" secondAttribute="leading" constant="36" id="tWz-gB-tWX"/>
-                            <constraint firstItem="NGB-Wu-lnX" firstAttribute="top" secondItem="Ye5-Un-zLY" secondAttribute="bottom" priority="250" constant="36" id="tYk-Xd-WPP"/>
-                            <constraint firstItem="AhY-8l-FQn" firstAttribute="leading" secondItem="VbF-qp-Zc8" secondAttribute="leading" constant="36" id="uBh-Oj-Y0n"/>
-                            <constraint firstItem="Ye5-Un-zLY" firstAttribute="top" secondItem="lLD-4P-caf" secondAttribute="bottom" constant="16" id="xZv-wy-snK"/>
-                            <constraint firstItem="VbF-qp-Zc8" firstAttribute="trailing" secondItem="PSE-g8-lGs" secondAttribute="trailing" constant="36" id="zgw-JG-ReZ"/>
+                            <constraint firstItem="tZE-Gf-4Pt" firstAttribute="leading" secondItem="ydD-Py-Xah" secondAttribute="leading" id="1mI-ck-UgN"/>
+                            <constraint firstAttribute="bottom" secondItem="tZE-Gf-4Pt" secondAttribute="bottom" id="4gS-Tu-WRc"/>
+                            <constraint firstAttribute="trailing" secondItem="tZE-Gf-4Pt" secondAttribute="trailing" id="qdB-4c-hhW"/>
+                            <constraint firstItem="tZE-Gf-4Pt" firstAttribute="top" secondItem="ydD-Py-Xah" secondAttribute="top" id="vRQ-N8-Nxg"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="PSE-g8-lGs" id="yBT-Ho-2l5"/>
-                        <outlet property="forgotPasswordButton" destination="oIB-nX-Lwh" id="JGI-j2-LEk"/>
                         <outlet property="loginButton" destination="LDr-yE-Ggs" id="AHt-ic-7HV"/>
                         <outlet property="loginFacebookButton" destination="lLD-4P-caf" id="VuT-DK-v6L"/>
                         <outlet property="loginGoogleButton" destination="Ye5-Un-zLY" id="32u-cP-2YH"/>
+                        <outlet property="loginStackView" destination="o5l-8w-2kL" id="FCy-Yy-Hb6"/>
                         <outlet property="passwordTextField" destination="AhY-8l-FQn" id="l9a-Xg-JJF"/>
                         <outlet property="signUpButton" destination="fia-fz-8Pf" id="bK4-WX-cIS"/>
                     </connections>
@@ -482,6 +505,7 @@
                         <outlet property="addressTextField" destination="wl0-Qk-rH8" id="Gjf-rW-7Pp"/>
                         <outlet property="confirmPasswordTextField" destination="K58-nl-3lP" id="8QF-Yv-R0V"/>
                         <outlet property="emailTextField" destination="bOa-4B-dKK" id="nz3-0X-Ljk"/>
+                        <outlet property="loginButton" destination="eVn-yq-GzV" id="5zg-YF-NOc"/>
                         <outlet property="nameTextField" destination="vte-xV-876" id="Kzo-YY-cD3"/>
                         <outlet property="passwordTextField" destination="Kn0-wS-8dB" id="fXy-lY-Dof"/>
                         <outlet property="phoneTextField" destination="I5K-wz-uND" id="x1R-bH-FvY"/>
