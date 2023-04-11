@@ -7,6 +7,8 @@
 
 import UIKit
 import FDUI
+import AuthenticationServices
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: FDTextField!
@@ -15,6 +17,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginFacebookButton: FDPrimaryButton!
     @IBOutlet weak var loginGoogleButton: FDPrimaryButton!
     @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var loginStackView: UIStackView!
     
     var viewModel: LoginViewModel!
     
@@ -37,6 +40,15 @@ class LoginViewController: UIViewController {
     func setup() {
         emailTextField.delegate = self
         passwordTextField.delegate = self
+        
+        if #available(iOS 13.0, *) {
+            let appleButton = ASAuthorizationAppleIDButton(type: .default, style: .black)
+            loginStackView.insertArrangedSubview(appleButton, at: 0)
+            appleButton.translatesAutoresizingMaskIntoConstraints = false
+            appleButton.heightAnchor.constraint(equalToConstant: 56).isActive = true
+            appleButton.cornerRadius = 28
+            appleButton.addTarget(self, action: #selector(self.appleButtonTapped(_:)), for: .touchUpInside)
+        }
     }
     
     func bindIsLoading() {
@@ -55,7 +67,7 @@ class LoginViewController: UIViewController {
         viewModel.isLoginSuccess.bind { [weak self] (value) in
             guard let `self` = self else { return }
             if value {
-                //FIXME: - Go To Home Page
+                self.showHomeViewController()
             }
         }
     }
@@ -64,7 +76,18 @@ class LoginViewController: UIViewController {
         viewModel.error.bind { [weak self] (value) in
             guard let `self` = self else { return }
             if let error = value {
-                self.presentAlert(title: "Oops!", message: error.localizedDescription)
+                let handler: () -> Void = {
+                    self.presentAlert(title: "Oops!", message: error.localizedDescription)
+                }
+                
+                if self.presentedViewController != nil {
+                    self.dismiss(animated: true) {
+                        handler()
+                    }
+                }
+                else {
+                    handler()
+                }
             }
         }
     }
@@ -79,6 +102,18 @@ class LoginViewController: UIViewController {
     
     func loginWithGoogle() {
         
+    }
+    
+    func loginWithAppleId() {
+        let appleIDProvider = ASAuthorizationAppleIDProvider()
+        let request = appleIDProvider.createRequest()
+        request.requestedScopes = [.fullName, .email]
+        request.nonce = viewModel.nonce
+        
+        let authorizationController = ASAuthorizationController(authorizationRequests: [request])
+        authorizationController.delegate = self
+        authorizationController.presentationContextProvider = self
+        authorizationController.performRequests()
     }
     
     //MARK: - Actions
@@ -98,6 +133,10 @@ class LoginViewController: UIViewController {
     @IBAction func signUpButtonTapped(_ sender: Any) {
         showSignUpViewController()
         removeFromParent()
+    }
+    
+    @IBAction func appleButtonTapped(_ sender: Any) {
+        loginWithAppleId()
     }
 }
 
@@ -120,6 +159,28 @@ extension LoginViewController: UITextFieldDelegate {
     }
 }
 
+//MARK: - ASAuthorizationControllerDelegate
+extension LoginViewController: ASAuthorizationControllerDelegate {
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
+            viewModel.loginWithCredential(appleIDCredential)
+        }
+        
+        func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+            // Handle error.
+            print("Sign in with Apple errored: \(error)")
+        }
+    }
+    
+}
+
+//MARK: - ASAuthorizationControllerPresentationContextProviding
+extension LoginViewController: ASAuthorizationControllerPresentationContextProviding {
+    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+        return view.window!
+    }
+}
+
 // MARK: - UIViewController
 extension UIViewController {
     func showLoginViewController() {
@@ -130,3 +191,4 @@ extension UIViewController {
         self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
+

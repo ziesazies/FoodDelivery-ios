@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		010EC88129E2C53600612C90 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010EC88029E2C53600612C90 /* HomeViewController.swift */; };
+		010EC88329E2C54500612C90 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 010EC88229E2C54500612C90 /* Home.storyboard */; };
 		011DD2D8296BF6E3000CC33F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011DD2D7296BF6E3000CC33F /* LoginViewController.swift */; };
 		013348FA295F1F36007A2F89 /* FDObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013348F9295F1F36007A2F89 /* FDObservable.swift */; };
 		013348FC295F2433007A2F89 /* FtuxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013348FB295F2433007A2F89 /* FtuxViewModel.swift */; };
@@ -69,12 +71,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		010EC88029E2C53600612C90 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		010EC88229E2C54500612C90 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		011DD2D7296BF6E3000CC33F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		013348F9295F1F36007A2F89 /* FDObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDObservable.swift; sourceTree = "<group>"; };
 		013348FB295F2433007A2F89 /* FtuxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FtuxViewModel.swift; sourceTree = "<group>"; };
 		014FB7B429D984070072EBE2 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		0183E9EE2962CFBA0056F948 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		0183E9F02962CFCD0056F948 /* LoginLandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginLandingViewController.swift; sourceTree = "<group>"; };
+		019D95DD29E304D000133B59 /* FoodDelivery.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FoodDelivery.entitlements; sourceTree = "<group>"; };
 		01B72EB2295D92F5007E9C05 /* Ftux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ftux.swift; sourceTree = "<group>"; };
 		01B72EB6295D93AC007E9C05 /* FtuxProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FtuxProvider.swift; sourceTree = "<group>"; };
 		01B72EB8295D99DF007E9C05 /* FtuxViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FtuxViewCell.swift; sourceTree = "<group>"; };
@@ -137,6 +142,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		010EC87F29E2B56700612C90 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				010EC88029E2C53600612C90 /* HomeViewController.swift */,
+				010EC88229E2C54500612C90 /* Home.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		0183E9E92962CC530056F948 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +215,7 @@
 		01EE9B61295C70890040D4F8 /* FoodDelivery */ = {
 			isa = PBXGroup;
 			children = (
+				019D95DD29E304D000133B59 /* FoodDelivery.entitlements */,
 				01BBCF452965AD2E00D83211 /* Extensions */,
 				01B72EB4295D9389007E9C05 /* Providers */,
 				01B72EB1295D92E3007E9C05 /* Models */,
@@ -235,6 +250,7 @@
 		01EE9B92295C739F0040D4F8 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				010EC87F29E2B56700612C90 /* Home */,
 				0183E9E92962CC530056F948 /* Login */,
 				01EE9B93295C73AF0040D4F8 /* Ftux */,
 			);
@@ -389,6 +405,7 @@
 				0183E9EF2962CFBA0056F948 /* Login.storyboard in Resources */,
 				01EE9B6F295C708B0040D4F8 /* LaunchScreen.storyboard in Resources */,
 				520622DB29DD4F3500325B23 /* GoogleService-Info.plist in Resources */,
+				010EC88329E2C54500612C90 /* Home.storyboard in Resources */,
 				01EE9B95295C73CE0040D4F8 /* Ftux.storyboard in Resources */,
 				01EE9B6C295C708B0040D4F8 /* Assets.xcassets in Resources */,
 			);
@@ -529,6 +546,7 @@
 				5283E6B829DD10CA00622E66 /* LoginViewModel.swift in Sources */,
 				01B72EB7295D93AC007E9C05 /* FtuxProvider.swift in Sources */,
 				01BBCF472965AD4200D83211 /* UIColorExtension.swift in Sources */,
+				010EC88129E2C53600612C90 /* HomeViewController.swift in Sources */,
 				0183E9F12962CFCD0056F948 /* LoginLandingViewController.swift in Sources */,
 				01EE9B65295C70890040D4F8 /* SceneDelegate.swift in Sources */,
 				5283E6B429DD077800622E66 /* StringExtension.swift in Sources */,
@@ -702,6 +720,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FoodDelivery/FoodDelivery.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 86CWQQPNC4;
@@ -735,6 +754,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FoodDelivery/FoodDelivery.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 86CWQQPNC4;

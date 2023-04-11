@@ -58,13 +58,19 @@ class SignUpViewModel {
                 self.error.value = error
             }
             else {
-                self.isSignUpSuccess.value = true
+                let request = result?.user.createProfileChangeRequest()
+                request?.displayName = name
+                request?.commitChanges(completion: { [weak self] (_) in
+                    guard let `self` = self else { return }
+                    self.isSignUpSuccess.value = true
+                })
             }
         }
         
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
-            self.isLoading.value = false
-            self.isSignUpSuccess.value = true
-        }
+        
+        //        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
+//            self.isLoading.value = false
+//            self.isSignUpSuccess.value = true
+//        }
     }
 }

@@ -35,7 +35,6 @@ class SignUpViewController: UIViewController {
     }
     
     //MARK: - Helpers
-    
     func setup() {
         nameTextField.delegate = self
         emailTextField.delegate = self
@@ -73,7 +72,18 @@ class SignUpViewController: UIViewController {
         viewModel.error.bind { [weak self] (value) in
             guard let `self` = self else { return }
             if let error = value {
-                self.presentAlert(title: "Oops", message: error.localizedDescription)
+                let handler: () -> Void = {
+                        self.presentAlert(title: "Oops!", message: error.localizedDescription)
+                }
+                
+                if self.presentedViewController != nil {
+                    self.dismiss(animated: true) {
+                        handler()
+                    }
+                }
+                else {
+                    handler()
+                }
             }
         }
     }
