@@ -37,6 +37,8 @@
 		5283E6B629DD098900622E66 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283E6B529DD098900622E66 /* SignUpViewModel.swift */; };
 		5283E6B829DD10CA00622E66 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283E6B729DD10CA00622E66 /* LoginViewModel.swift */; };
 		68B6F979AC6CF385B125B93A /* Pods_FoodDelivery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA24F83C7F4499F65B066A76 /* Pods_FoodDelivery.framework */; };
+		B54013212A20A542000328AF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54013202A20A542000328AF /* MainViewController.swift */; };
+		B54013232A20A54B000328AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B54013222A20A54B000328AF /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +110,8 @@
 		779F507055F01042FEBD0E90 /* Pods-FoodDeliveryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodDeliveryTests.debug.xcconfig"; path = "Target Support Files/Pods-FoodDeliveryTests/Pods-FoodDeliveryTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9FFFFB236F99A643B0A0D06A /* Pods-FoodDelivery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodDelivery.release.xcconfig"; path = "Target Support Files/Pods-FoodDelivery/Pods-FoodDelivery.release.xcconfig"; sourceTree = "<group>"; };
 		AC155965BDB28C5AD722D517 /* Pods-FoodDelivery-FoodDeliveryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodDelivery-FoodDeliveryUITests.release.xcconfig"; path = "Target Support Files/Pods-FoodDelivery-FoodDeliveryUITests/Pods-FoodDelivery-FoodDeliveryUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B54013202A20A542000328AF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B54013222A20A54B000328AF /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		BA24F83C7F4499F65B066A76 /* Pods_FoodDelivery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodDelivery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1378CD757FB995F0E84E1B4 /* Pods-FoodDeliveryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodDeliveryTests.release.xcconfig"; path = "Target Support Files/Pods-FoodDeliveryTests/Pods-FoodDeliveryTests.release.xcconfig"; sourceTree = "<group>"; };
 		D2D24A6573E3B8D093E1DFC6 /* Pods-FoodDelivery-FoodDeliveryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodDelivery-FoodDeliveryUITests.debug.xcconfig"; path = "Target Support Files/Pods-FoodDelivery-FoodDeliveryUITests/Pods-FoodDelivery-FoodDeliveryUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -250,6 +254,7 @@
 		01EE9B92295C739F0040D4F8 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				B540131F2A20A52D000328AF /* Main */,
 				010EC87F29E2B56700612C90 /* Home */,
 				0183E9E92962CC530056F948 /* Login */,
 				01EE9B93295C73AF0040D4F8 /* Ftux */,
@@ -290,6 +295,15 @@
 				C1378CD757FB995F0E84E1B4 /* Pods-FoodDeliveryTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B540131F2A20A52D000328AF /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B54013202A20A542000328AF /* MainViewController.swift */,
+				B54013222A20A54B000328AF /* Main.storyboard */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -402,6 +416,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B54013232A20A54B000328AF /* Main.storyboard in Resources */,
 				0183E9EF2962CFBA0056F948 /* Login.storyboard in Resources */,
 				01EE9B6F295C708B0040D4F8 /* LaunchScreen.storyboard in Resources */,
 				520622DB29DD4F3500325B23 /* GoogleService-Info.plist in Resources */,
@@ -542,6 +557,7 @@
 				01EE9B97295C9B080040D4F8 /* FtuxViewController.swift in Sources */,
 				01EE9B63295C70890040D4F8 /* AppDelegate.swift in Sources */,
 				5283E6B629DD098900622E66 /* SignUpViewModel.swift in Sources */,
+				B54013212A20A542000328AF /* MainViewController.swift in Sources */,
 				014FB7B529D984070072EBE2 /* SignUpViewController.swift in Sources */,
 				5283E6B829DD10CA00622E66 /* LoginViewModel.swift in Sources */,
 				01B72EB7295D93AC007E9C05 /* FtuxProvider.swift in Sources */,
