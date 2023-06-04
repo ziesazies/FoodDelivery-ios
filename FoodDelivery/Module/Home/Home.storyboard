@@ -33,13 +33,35 @@
                             <constraint firstItem="6Ep-cy-atu" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="POE-jd-dXw"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="QQ5-nE-K4X"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="118" y="4"/>
+            <point key="canvasLocation" x="1043.5114503816794" y="3.5211267605633805"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="TWa-do-tN8">
+            <objects>
+                <navigationController storyboardIdentifier="NavHome" automaticallyAdjustsScrollViewInsets="NO" id="K6o-12-HWf" customClass="FDNavigationController" customModule="FDUI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="tab_home" id="GQl-jK-h71"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0Eq-Oc-eMr">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="N9b-fc-gS6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZPT-qP-GmM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116.79389312977099" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
+        <image name="tab_home" width="30" height="29"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
