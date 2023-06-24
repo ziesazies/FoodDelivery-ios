@@ -11,7 +11,7 @@
         <scene sceneID="f55-b4-iZw">
             <objects>
                 <viewControllerPlaceholder storyboardName="Profile" referencedIdentifier="NavProfile" id="3h0-mN-riR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="6qz-rI-kZh"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="tab_profile" id="6qz-rI-kZh"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Lk-wo-3pf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -21,7 +21,7 @@
         <scene sceneID="tBL-hd-6SD">
             <objects>
                 <viewControllerPlaceholder storyboardName="Offers" referencedIdentifier="NavOffers" id="XNB-rW-SWb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="HOs-mY-uXi"/>
+                    <tabBarItem key="tabBarItem" title="Offers" image="tab_offers" id="HOs-mY-uXi"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jIq-R7-O5h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -31,7 +31,7 @@
         <scene sceneID="UPN-tC-MNU">
             <objects>
                 <viewControllerPlaceholder storyboardName="More" referencedIdentifier="NavMore" id="2DD-JB-nZr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="c6A-89-Jsl"/>
+                    <tabBarItem key="tabBarItem" title="More" image="tab_more" id="c6A-89-Jsl"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="skK-gD-pQn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -41,7 +41,7 @@
         <scene sceneID="jym-a1-nv2">
             <objects>
                 <viewControllerPlaceholder storyboardName="Menu" referencedIdentifier="NavMenu" id="Nr4-Am-roR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="2R1-8X-W5w"/>
+                    <tabBarItem key="tabBarItem" title="Menu" image="tab_menu" id="2R1-8X-W5w"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eOR-ql-3VM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,7 +51,7 @@
         <scene sceneID="SGZ-Dx-8FV">
             <objects>
                 <viewControllerPlaceholder storyboardName="Home" referencedIdentifier="NavHome" id="b2E-7M-DWh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="gke-wR-v0c"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="tab_home" id="gke-wR-v0c"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x9d-4f-Nbn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -67,9 +67,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="b2E-7M-DWh" kind="relationship" relationship="viewControllers" id="LDn-IT-qja"/>
                         <segue destination="Nr4-Am-roR" kind="relationship" relationship="viewControllers" id="qiQ-Fy-509"/>
                         <segue destination="XNB-rW-SWb" kind="relationship" relationship="viewControllers" id="Kec-Ze-bHI"/>
+                        <segue destination="b2E-7M-DWh" kind="relationship" relationship="viewControllers" id="LDn-IT-qja"/>
                         <segue destination="3h0-mN-riR" kind="relationship" relationship="viewControllers" id="vO6-3r-QtV"/>
                         <segue destination="2DD-JB-nZr" kind="relationship" relationship="viewControllers" id="QC2-SC-bn4"/>
                     </connections>
@@ -79,4 +79,11 @@
             <point key="canvasLocation" x="-1172" y="-802"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tab_home" width="30" height="29"/>
+        <image name="tab_menu" width="14" height="14"/>
+        <image name="tab_more" width="16" height="16"/>
+        <image name="tab_offers" width="16" height="16"/>
+        <image name="tab_profile" width="13" height="17"/>
+    </resources>
 </document>

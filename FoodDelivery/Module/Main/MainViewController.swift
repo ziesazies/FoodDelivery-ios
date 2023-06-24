@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FDUI
 
 class MainViewController: UITabBarController {
 
@@ -13,19 +14,22 @@ class MainViewController: UITabBarController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setup()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setup() {
+        tabBar.tintColor = UIColor(rgb: 0xFC6011)
+        tabBar.unselectedItemTintColor = UIColor(rgb: 0xB6B7B7)
+        
+        delegate = self
     }
-    */
+}
 
+extension MainViewController: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        
+        return true
+    }
 }
 
 extension UIViewController {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0100F0102A2E3F0C00C0DCF9 /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0100F00F2A2E3F0C00C0DCF9 /* CategoriesTableViewCell.swift */; };
+		0100F0122A2E441B00C0DCF9 /* CategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0100F0112A2E441B00C0DCF9 /* CategoryViewCell.swift */; };
 		010EC88129E2C53600612C90 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010EC88029E2C53600612C90 /* HomeViewController.swift */; };
 		010EC88329E2C54500612C90 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 010EC88229E2C54500612C90 /* Home.storyboard */; };
 		011DD2D8296BF6E3000CC33F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011DD2D7296BF6E3000CC33F /* LoginViewController.swift */; };
@@ -81,6 +83,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0100F00F2A2E3F0C00C0DCF9 /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
+		0100F0112A2E441B00C0DCF9 /* CategoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewCell.swift; sourceTree = "<group>"; };
 		010EC88029E2C53600612C90 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		010EC88229E2C54500612C90 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		011DD2D7296BF6E3000CC33F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +171,8 @@
 			children = (
 				010EC88029E2C53600612C90 /* HomeViewController.swift */,
 				010EC88229E2C54500612C90 /* Home.storyboard */,
+				0100F00F2A2E3F0C00C0DCF9 /* CategoriesTableViewCell.swift */,
+				0100F0112A2E441B00C0DCF9 /* CategoryViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -623,12 +629,14 @@
 				B54013332A20B67B000328AF /* OffersViewController.swift in Sources */,
 				B540132F2A20B575000328AF /* ProfileViewController.swift in Sources */,
 				5283E6B829DD10CA00622E66 /* LoginViewModel.swift in Sources */,
+				0100F0102A2E3F0C00C0DCF9 /* CategoriesTableViewCell.swift in Sources */,
 				01B72EB7295D93AC007E9C05 /* FtuxProvider.swift in Sources */,
 				01BBCF472965AD4200D83211 /* UIColorExtension.swift in Sources */,
 				010EC88129E2C53600612C90 /* HomeViewController.swift in Sources */,
 				B54013282A20B446000328AF /* MenuViewController.swift in Sources */,
 				0183E9F12962CFCD0056F948 /* LoginLandingViewController.swift in Sources */,
 				01EE9B65295C70890040D4F8 /* SceneDelegate.swift in Sources */,
+				0100F0122A2E441B00C0DCF9 /* CategoryViewCell.swift in Sources */,
 				5283E6B429DD077800622E66 /* StringExtension.swift in Sources */,
 				011DD2D8296BF6E3000CC33F /* LoginViewController.swift in Sources */,
 			);
