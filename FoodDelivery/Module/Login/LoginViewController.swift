@@ -67,7 +67,7 @@ class LoginViewController: UIViewController {
         viewModel.isLoginSuccess.bind { [weak self] (value) in
             guard let `self` = self else { return }
             if value {
-                self.showHomeViewController()
+                self.showMainViewController()
             }
         }
     }

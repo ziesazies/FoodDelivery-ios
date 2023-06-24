@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--NavProfile-->
+        <scene sceneID="f55-b4-iZw">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" referencedIdentifier="NavProfile" id="3h0-mN-riR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="tab_profile" id="6qz-rI-kZh"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Lk-wo-3pf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-289" y="-896"/>
+        </scene>
+        <!--NavOffers-->
+        <scene sceneID="tBL-hd-6SD">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Offers" referencedIdentifier="NavOffers" id="XNB-rW-SWb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Offers" image="tab_offers" id="HOs-mY-uXi"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jIq-R7-O5h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-290" y="-840"/>
+        </scene>
+        <!--NavMore-->
+        <scene sceneID="UPN-tC-MNU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="More" referencedIdentifier="NavMore" id="2DD-JB-nZr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="More" image="tab_more" id="c6A-89-Jsl"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="skK-gD-pQn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-296" y="-766"/>
+        </scene>
+        <!--NavMenu-->
+        <scene sceneID="jym-a1-nv2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Menu" referencedIdentifier="NavMenu" id="Nr4-Am-roR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Menu" image="tab_menu" id="2R1-8X-W5w"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eOR-ql-3VM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-294" y="-700"/>
+        </scene>
+        <!--NavHome-->
+        <scene sceneID="SGZ-Dx-8FV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" referencedIdentifier="NavHome" id="b2E-7M-DWh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="tab_home" id="gke-wR-v0c"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x9d-4f-Nbn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-292" y="-634"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="Tfi-1t-G9V">
+            <objects>
+                <tabBarController storyboardIdentifier="Main" id="Ouy-Pu-2Fx" customClass="MainViewController" customModule="FoodDelivery" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uwA-KN-TRq">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Nr4-Am-roR" kind="relationship" relationship="viewControllers" id="qiQ-Fy-509"/>
+                        <segue destination="XNB-rW-SWb" kind="relationship" relationship="viewControllers" id="Kec-Ze-bHI"/>
+                        <segue destination="b2E-7M-DWh" kind="relationship" relationship="viewControllers" id="LDn-IT-qja"/>
+                        <segue destination="3h0-mN-riR" kind="relationship" relationship="viewControllers" id="vO6-3r-QtV"/>
+                        <segue destination="2DD-JB-nZr" kind="relationship" relationship="viewControllers" id="QC2-SC-bn4"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M0W-LQ-b7I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1172" y="-802"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tab_home" width="30" height="29"/>
+        <image name="tab_menu" width="14" height="14"/>
+        <image name="tab_more" width="16" height="16"/>
+        <image name="tab_offers" width="16" height="16"/>
+        <image name="tab_profile" width="13" height="17"/>
+    </resources>
+</document>
