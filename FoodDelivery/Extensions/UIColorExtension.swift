@@ -9,7 +9,10 @@ import Foundation
 import UIKit
 
 extension UIColor {
-    public static var primary: UIColor = UIColor(rgb: 0xFC6011)
+    static var primary: UIColor = UIColor(named: "Primary")!
+    static var primaryText: UIColor = UIColor(named: "Primary Text")!
+    static var secondaryText: UIColor = UIColor(named: "Secondary Text")!
+    static var placeholder: UIColor = UIColor(named: "Placeholder")!
     
     convenience init(red: Int, green: Int, blue: Int) {
         assert(red >= 0 && red <= 255, "Invalid red component")

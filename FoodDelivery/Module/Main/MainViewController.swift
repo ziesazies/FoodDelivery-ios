@@ -22,6 +22,8 @@ class MainViewController: UITabBarController {
         tabBar.unselectedItemTintColor = UIColor(rgb: 0xB6B7B7)
         
         delegate = self
+        
+        selectedIndex = 2
     }
 }
 

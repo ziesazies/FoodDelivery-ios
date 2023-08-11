@@ -72,17 +72,17 @@ class SignUpViewController: UIViewController {
         viewModel.error.bind { [weak self] (value) in
             guard let `self` = self else { return }
             if let error = value {
-                let handler: () -> Void = {
+                let presentAlert: () -> Void = {
                         self.presentAlert(title: "Oops!", message: error.localizedDescription)
                 }
                 
                 if self.presentedViewController != nil {
                     self.dismiss(animated: true) {
-                        handler()
+                        presentAlert()
                     }
                 }
                 else {
-                    handler()
+                    presentAlert()
                 }
             }
         }
