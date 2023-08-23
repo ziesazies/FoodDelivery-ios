@@ -5,7 +5,7 @@
       location = "group:Modules/FDUI/FDUI.xcodeproj">
    </FileRef>
    <FileRef
-      location = "container:FoodDelivery.xcodeproj">
+      location = "group:FoodDelivery.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

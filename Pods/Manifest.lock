@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (5.7.1)
   - Firebase/Auth (10.7.0):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 10.7.0)
@@ -32,14 +33,24 @@ PODS:
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (3.1.0)
   - IQKeyboardManagerSwift (6.3.0)
+  - Kingfisher (7.9.0)
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
+  - Moya/RxSwift (15.0.0):
+    - Moya/Core
+    - RxSwift (~> 6.0)
   - PromisesObjC (2.2.0)
+  - RxSwift (6.5.0)
 
 DEPENDENCIES:
   - Firebase/Auth
   - IQKeyboardManagerSwift (= 6.3.0)
+  - Kingfisher
+  - Moya/RxSwift (~> 15.0)
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - Firebase
     - FirebaseAuth
     - FirebaseCore
@@ -47,9 +58,13 @@ SPEC REPOS:
     - GoogleUtilities
     - GTMSessionFetcher
     - IQKeyboardManagerSwift
+    - Kingfisher
+    - Moya
     - PromisesObjC
+    - RxSwift
 
 SPEC CHECKSUMS:
+  Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
   Firebase: 0219acf760880eeec8ce479895bd7767466d9f81
   FirebaseAuth: dd64c01631df724b09f33e584625775c52f7d71f
   FirebaseCore: e317665b9d744727a97e623edbbed009320afdd7
@@ -57,8 +72,11 @@ SPEC CHECKSUMS:
   GoogleUtilities: 9aa0ad5a7bc171f8bae016300bfcfa3fb8425749
   GTMSessionFetcher: c9e714f7eec91a55641e2bab9f45fd83a219b882
   IQKeyboardManagerSwift: a8228c257614af98743b4cd8584637025f36358f
+  Kingfisher: 59f908b6d2f403b0a3e539debb0eec05cb27002c
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   PromisesObjC: 09985d6d70fbe7878040aa746d78236e6946d2ef
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
 
-PODFILE CHECKSUM: 2f23941262c5a35b95b48d51ddd0d75e811682cb
+PODFILE CHECKSUM: df6c10297988d5c687e8eca1fcf97a87890df46d
 
-COCOAPODS: 1.12.0
+COCOAPODS: 1.12.1

@@ -8,18 +8,27 @@
 import UIKit
 import FirebaseAuth
 import FDUI
+import Kingfisher
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController{
     @IBOutlet weak var locationTitleLabel: UILabel!
     @IBOutlet weak var locationButton: UIButton!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    
+    var categories: [RestaurantCategory] = []
+    var popular: [Restaurant] = []
+    var mostPopular: [Restaurant] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         setup()
+        
+        loadCategories()
+        loadPopular()
     }
     
     func setup() {
@@ -27,6 +36,31 @@ class HomeViewController: UIViewController {
         searchBar.backgroundImage = UIImage()
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    func loadCategories() {
+        restaurantProvider.getCategories { [weak self] (result) in
+            
+            switch result {
+            case .success(let data):
+                self?.categories = data
+                self?.tableView.reloadSections(IndexSet([0]), with: .automatic)
+            case .failure(let error):
+                self?.presentAlert(title: "Error", message: error.localizedDescription)
+            }
+        }
+    }
+    
+    func loadPopular() {
+        restaurantProvider.getPopular { [weak self] (result) in
+            switch result {
+            case .success(let data):
+                self?.popular = data
+                self?.tableView.reloadSections(IndexSet([1]), with: .automatic)
+            case .failure(let error):
+                self?.presentAlert(title: "Error", message: error.localizedDescription)
+            }
+        }
     }
     
     //MARK: - Actions
@@ -52,7 +86,7 @@ extension HomeViewController: UITableViewDataSource {
         case 0:
             return 1
         case 1:
-            return 3
+            return min(3, popular.count)
         case 2:
             return 1
         default:
@@ -77,18 +111,19 @@ extension HomeViewController: UITableViewDataSource {
                 return UITableViewCell()
             }
             
-            cell.restaurantImageView.image = UIImage(named: "img_pizza")
-            cell.nameLabel.text = "Minute by tuk tuk"
+            let restaurant = popular[indexPath.row]
+            cell.restaurantImageView.kf.setImage(with: URL(string: restaurant.imageUrl))
+            cell.nameLabel.text = restaurant.name
             
             let ratingsAttText: NSMutableAttributedString = NSMutableAttributedString(
-                string: "4.5",
+                string: String(format: "%.1f", restaurant.overallRating),
                 attributes: [
                     .font: UIFont.systemFont(ofSize: 12, weight: .regular),
                     .foregroundColor: UIColor.primary
                 ]
             )
             ratingsAttText.append(NSAttributedString(
-                string: " (124 ratings)",
+                string: " (\(restaurant.totalRating) ratings)",
                 attributes: [
                     .font: UIFont.systemFont(ofSize: 12, weight: .regular),
                     .foregroundColor: UIColor.placeholder
@@ -148,7 +183,7 @@ extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView.tag {
         case 0:
-            return 10
+            return categories.count
         case 2:
             return 5
         default:
@@ -163,8 +198,10 @@ extension HomeViewController: UICollectionViewDataSource {
                 return UICollectionViewCell()
             }
             
-            cell.imageView.image = UIImage(named: "img_dummy_category")
-            cell.titleLabel.text = "Cat.\(indexPath.item + 1)"
+            let categories = categories[indexPath.item]
+            
+            cell.imageView.kf.setImage(with: URL(string: categories.image?.url ?? ""))
+            cell.titleLabel.text = categories.name
             return cell
         case 2:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PopularRestaurant", for: indexPath) as? PopularRestaurantViewCell else { return UICollectionViewCell() }
@@ -306,7 +343,7 @@ extension HomeViewController: UITableViewDelegate {
 extension UIViewController {
     func showHomeViewController() {
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "Home")
+        let viewController = storyboard.instantiateViewController(withIdentifier: "Home") as! HomeViewController
         
         let scenes = UIApplication.shared.connectedScenes
         let windowScene = scenes.first as! UIWindowScene
@@ -317,4 +354,9 @@ extension UIViewController {
         
         window.rootViewController = navigationController
     }
+}
+
+//MARK: RestaurantProviderProtocol
+extension HomeViewController: RestaurantProviderProtocol {
+    
 }

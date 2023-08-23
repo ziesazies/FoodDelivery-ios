@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0163BD0B2A8F4ADC0099FF2A /* FDImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0163BD0A2A8F4ADC0099FF2A /* FDImageView.swift */; };
+		0163BD0D2A8F5D6C0099FF2A /* FDRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0163BD0C2A8F5D6C0099FF2A /* FDRoundedView.swift */; };
+		0163BD0F2A8F70790099FF2A /* FDCustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0163BD0E2A8F70790099FF2A /* FDCustomTextField.swift */; };
 		019E6C5329D1CBB400931315 /* FDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019E6C5229D1CBB400931315 /* FDTextField.swift */; };
 		019E6C5529D1CBD400931315 /* FDPrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019E6C5429D1CBD400931315 /* FDPrimaryButton.swift */; };
 		019E6C5729D1CBFA00931315 /* FDSecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019E6C5629D1CBFA00931315 /* FDSecondaryButton.swift */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0163BD0A2A8F4ADC0099FF2A /* FDImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDImageView.swift; sourceTree = "<group>"; };
+		0163BD0C2A8F5D6C0099FF2A /* FDRoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDRoundedView.swift; sourceTree = "<group>"; };
+		0163BD0E2A8F70790099FF2A /* FDCustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDCustomTextField.swift; sourceTree = "<group>"; };
 		019E6C5229D1CBB400931315 /* FDTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDTextField.swift; sourceTree = "<group>"; };
 		019E6C5429D1CBD400931315 /* FDPrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDPrimaryButton.swift; sourceTree = "<group>"; };
 		019E6C5629D1CBFA00931315 /* FDSecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDSecondaryButton.swift; sourceTree = "<group>"; };
@@ -52,6 +58,9 @@
 				019F8DF029D3DC760083C2ED /* FDNavigationController.swift */,
 				5283E6B029DD018C00622E66 /* FDLoadingViewController.swift */,
 				5283E6AF29DD018C00622E66 /* FDLoadingViewController.xib */,
+				0163BD0A2A8F4ADC0099FF2A /* FDImageView.swift */,
+				0163BD0C2A8F5D6C0099FF2A /* FDRoundedView.swift */,
+				0163BD0E2A8F70790099FF2A /* FDCustomTextField.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -175,7 +184,10 @@
 				01CE047C29D181DD0086CB82 /* UIColorExtension.swift in Sources */,
 				019F8DF329D3E62E0083C2ED /* UIViewControllerExtension.swift in Sources */,
 				019E6C5329D1CBB400931315 /* FDTextField.swift in Sources */,
+				0163BD0F2A8F70790099FF2A /* FDCustomTextField.swift in Sources */,
+				0163BD0B2A8F4ADC0099FF2A /* FDImageView.swift in Sources */,
 				5283E6B229DD018C00622E66 /* FDLoadingViewController.swift in Sources */,
+				0163BD0D2A8F5D6C0099FF2A /* FDRoundedView.swift in Sources */,
 				019E6C5529D1CBD400931315 /* FDPrimaryButton.swift in Sources */,
 				019F8DF129D3DC760083C2ED /* FDNavigationController.swift in Sources */,
 			);
