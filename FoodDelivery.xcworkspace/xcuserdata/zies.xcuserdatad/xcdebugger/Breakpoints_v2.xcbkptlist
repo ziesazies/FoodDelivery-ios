@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "82CA3F56-239C-465E-867E-62649901C7EE"
+            uuid = "8FB21F62-113D-415C-B587-DDC96FC831FE"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FoodDelivery/Module/Home/HomeViewController.swift"
+            filePath = "FoodDelivery/Module/Profile/LocationPickerViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "188"
-            endingLineNumber = "188"
-            landmarkName = "collectionView(_:numberOfItemsInSection:)"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "mapView(_:annotationView:calloutAccessoryControlTapped:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

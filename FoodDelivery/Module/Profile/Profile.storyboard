@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -22,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sjh-Xg-Mp6">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="762.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="842.33333333333337"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ml-LM-kEN" customClass="FDRoundedView" customModule="FDUI">
                                                 <rect key="frame" x="146.66666666666666" y="20" width="100" height="100"/>
@@ -83,7 +84,7 @@
                                                 </state>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="TpH-nq-nJ5">
-                                                <rect key="frame" x="20" y="258.33333333333331" width="353" height="463.99999999999994"/>
+                                                <rect key="frame" x="20" y="258.33333333333326" width="353" height="544"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3a2-JP-xHZ" customClass="FDCustomTextField" customModule="FDUI">
                                                         <rect key="frame" x="0.0" y="0.0" width="353" height="64"/>
@@ -135,14 +136,41 @@
                                                                 <real key="value" value="0.0"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Address"/>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="Depok"/>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="_contentType">
                                                                 <integer key="value" value="1"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="Depok"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aIF-yC-R6M" customClass="FDCustomTextField" customModule="FDUI">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Os7-5q-wq6">
                                                         <rect key="frame" x="0.0" y="320.00000000000006" width="353" height="64"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Atj-Cd-qUv" customClass="FDSecondaryButton" customModule="FDUI">
+                                                                <rect key="frame" x="0.0" y="8" width="353" height="56"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="56" id="dwq-aS-UrG"/>
+                                                                </constraints>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="Select Location"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="28"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="locationButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Bfr-Xl-WWU"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="Atj-Cd-qUv" firstAttribute="leading" secondItem="Os7-5q-wq6" secondAttribute="leading" id="ewC-LS-21q"/>
+                                                            <constraint firstAttribute="bottom" secondItem="Atj-Cd-qUv" secondAttribute="bottom" id="kPV-Gy-mH8"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Atj-Cd-qUv" secondAttribute="trailing" id="v0t-3b-rqS"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aIF-yC-R6M" customClass="FDCustomTextField" customModule="FDUI">
+                                                        <rect key="frame" x="0.0" y="400.00000000000006" width="353" height="64"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -156,7 +184,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iIG-Kq-Lfv">
-                                                        <rect key="frame" x="0.0" y="400.00000000000006" width="353" height="64"/>
+                                                        <rect key="frame" x="0.0" y="480" width="353" height="64"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcN-8Z-JYi" customClass="FDPrimaryButton" customModule="FDUI">
                                                                 <rect key="frame" x="0.0" y="8" width="353" height="56"/>
@@ -224,6 +252,7 @@
                         <outlet property="editButton" destination="AZK-az-h4l" id="9bW-GY-C80"/>
                         <outlet property="emailTextField" destination="h7I-vn-IgI" id="3z0-Qj-2Lb"/>
                         <outlet property="greetingLabel" destination="DLY-5M-iR7" id="KzK-4S-LQf"/>
+                        <outlet property="locationButton" destination="Atj-Cd-qUv" id="hpo-2K-UAz"/>
                         <outlet property="nameTextField" destination="3a2-JP-xHZ" id="ndN-1B-cHq"/>
                         <outlet property="passwordTextField" destination="aIF-yC-R6M" id="S0A-j7-dK7"/>
                         <outlet property="phoneTextField" destination="x37-d3-kQL" id="0Vo-Rf-ZHm"/>
@@ -236,6 +265,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="982.44274809160299" y="-2.1126760563380285"/>
+        </scene>
+        <!--Location Picker View Controller-->
+        <scene sceneID="Nyc-Bn-Tcs">
+            <objects>
+                <viewController storyboardIdentifier="LocationPicker" id="1zv-Ye-vD0" customClass="LocationPickerViewController" customModule="FoodDelivery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jMM-Or-34J">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cvm-Rq-Pw9">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="B8g-9b-elr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cvm-Rq-Pw9" firstAttribute="leading" secondItem="B8g-9b-elr" secondAttribute="leading" id="86r-dZ-QoO"/>
+                            <constraint firstAttribute="bottom" secondItem="cvm-Rq-Pw9" secondAttribute="bottom" id="AYE-3C-bqu"/>
+                            <constraint firstItem="cvm-Rq-Pw9" firstAttribute="top" secondItem="jMM-Or-34J" secondAttribute="top" id="fwY-ik-sUo"/>
+                            <constraint firstItem="cvm-Rq-Pw9" firstAttribute="trailing" secondItem="B8g-9b-elr" secondAttribute="trailing" id="o46-UR-B5c"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="cvm-Rq-Pw9" id="whR-Xz-gek"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o9c-To-rKM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1925.9541984732823" y="11.971830985915494"/>
         </scene>
         <!--Profile-->
         <scene sceneID="8cu-ef-kC4">
@@ -259,6 +318,9 @@
         </scene>
     </scenes>
     <designables>
+        <designable name="Atj-Cd-qUv">
+            <size key="intrinsicContentSize" width="117" height="32"/>
+        </designable>
         <designable name="jcN-8Z-JYi">
             <size key="intrinsicContentSize" width="37" height="32"/>
         </designable>

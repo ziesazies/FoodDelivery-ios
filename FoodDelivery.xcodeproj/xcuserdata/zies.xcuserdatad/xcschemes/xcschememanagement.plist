@@ -7,7 +7,25 @@
 		<key>FoodDelivery.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>16</integer>
+			<integer>15</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>01EE9B5E295C70890040D4F8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>01EE9B74295C708C0040D4F8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>01EE9B7E295C708C0040D4F8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

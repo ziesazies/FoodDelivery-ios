@@ -21,7 +21,9 @@
 			</array>
 		</dict>
 	</dict>
-	<key>UIUserInterfaceStyle</key>
-	<string>Light</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>App need access to your location for ...</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>App need access to your location for ...</string>
 </dict>
 </plist>

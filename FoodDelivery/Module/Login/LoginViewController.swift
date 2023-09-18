@@ -93,7 +93,8 @@ class LoginViewController: UIViewController {
     }
     
     func login() {
-        viewModel.login()
+//        viewModel.login()
+        viewModel.loginWithEmail()
     }
     
     func loginWithFb() {

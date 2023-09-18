@@ -33,6 +33,26 @@ class LoginViewModel {
         self.password = FDObservable<String?>(password)
     }
     
+    func loginWithEmail() {
+        loadingMessage = "Please wait..."
+        isLoading.value = true
+        
+        userProvider.login(email: email.value ?? "", password: password.value ?? "") { [weak self] (result) in
+            guard let `self` = self else { return }
+            switch result {
+            case .success:
+                self.userProvider.loadMe { [weak self] (result) in
+                    guard let `self` = self else { return }
+                    self.isLoading.value = false
+                    self.isLoginSuccess.value = true
+                }
+            case .failure(let error):
+                self.isLoading.value = false
+                self.error.value = error
+            }
+        }
+    }
+    
     func login() {
         loadingMessage = "Please wait..."
         isLoading.value = true
@@ -144,4 +164,9 @@ class LoginViewModel {
             
         }
     }
+}
+
+//MARK: - UserProviderProtocol
+extension LoginViewModel: UserProviderProtocol {
+    
 }
