@@ -14,6 +14,10 @@ struct Image: Decodable {
         case url
     }
     
+    init(url: String) {
+        self.url = url
+    }
+    
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         url = try container.decodeIfPresent(String.self, forKey: .url) ?? ""

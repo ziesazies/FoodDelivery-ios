@@ -8,6 +8,7 @@
 import UIKit
 import IQKeyboardManagerSwift
 import Firebase
+import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,15 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         IQKeyboardManager.shared.enable = true
         
-        // iOS Below 13
-        if #available(iOS 13, *) {
-            
-        } else {
-            
-            if Auth.auth().currentUser != nil {
-                window?.rootViewController?.showHomeViewController()
-            }
-        }
         
         return true
     }
@@ -50,6 +42,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
-
+    //MARK: - Core Data
+    lazy var persistenContainer: NSPersistentContainer = {
+        let container = NSPersistentContainer(name: "FoodDelivery")
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error as NSError? {
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+        })
+        return container
+    }()
+    
+    //MARK: - Core Data Saving support
+    var viewContext: NSManagedObjectContext {
+        return persistenContainer.viewContext
+    }
+    
+    func saveContext() {
+        let context = persistenContainer.viewContext
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch {
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
+        }
+    }
 }
 

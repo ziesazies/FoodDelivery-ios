@@ -15,6 +15,10 @@ class MainViewController: UITabBarController {
 
         // Do any additional setup after loading the view.
         setup()
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        _ = appDelegate.viewContext
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        print(paths[0])
     }
     
     func setup() {

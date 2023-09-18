@@ -25,5 +25,9 @@
 	<string>App need access to your location for ...</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>App need access to your location for ...</string>
+	<key>NSCameraUsageDescription</key>
+	<string>App need access to camera for set profile picture</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>App need access to photo for set profile picture</string>
 </dict>
 </plist>

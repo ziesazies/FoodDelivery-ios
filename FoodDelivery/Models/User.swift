@@ -26,6 +26,19 @@ struct User: Codable {
         case profileImage = "profile_image"
     }
     
+    init(userData: UserData) {
+        id = Int(userData.userId)
+        name = userData.name ?? ""
+        email = userData.email ?? ""
+        phone = userData.phone ?? ""
+        address = userData.address ?? ""
+        profileImage = Image(url: userData.profileImageUrl ?? "")
+        if let data = userData.location,
+           let location = try? JSONDecoder().decode(Location.self, from: data) {
+            self.location = location
+        }
+    }
+    
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         id = try container.decodeIfPresent(Int.self, forKey: .id) ?? 0

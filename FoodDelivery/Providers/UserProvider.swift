@@ -10,7 +10,13 @@ import RxSwift
 
 class UserProvider {
     static fileprivate let shared: UserProvider = UserProvider()
-    private init() { }
+    private init() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.viewContext
+        
+        let user = UserData.fetchUserData(context: context)
+        self.user.value = user
+    }
     
     let user: FDObservable<User?> = FDObservable<User?>(nil)
     
@@ -40,6 +46,15 @@ class UserProvider {
     
     private let disposeBag = DisposeBag()
     
+    private func updateUserData(_ user: User) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.viewContext
+        
+        _ = UserData.saveUserData(user, context: context)
+        appDelegate.saveContext()
+        
+    }
+    
     func login(email: String, password: String, completion: @escaping (Result<Void, Error>) -> Void) {
         let request = LoginRequest(email: email, password: password)
         authAPIProvider.rx.request(.login(request))
@@ -62,11 +77,28 @@ class UserProvider {
                 switch event {
                 case .success(let user):
                     self.user.value = user
+                    self.updateUserData(user)
                     completion(.success(()))
                 case .failure(let error):
                     completion(.failure(error))
                 }
             }.disposed(by: disposeBag)
+    }
+    
+    func uploadProfileImage(_ image: UIImage, completion: @escaping (Result<Void, Error>) -> Void) {
+        authAPIProvider.rx.request(.profileImage(image, user.value?.id ?? 0))
+            .map(User.self)
+            .subscribe { (event) in
+                switch event {
+                case .success(let user):
+                    self.user.value = user
+                    self.updateUserData(user)
+                    completion(.success(()))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+            }
+            .disposed(by: disposeBag)
     }
 }
 

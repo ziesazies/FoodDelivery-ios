@@ -16,6 +16,7 @@ enum AuthAPI {
     case signup(SignupRequest)
     case login(LoginRequest)
     case me
+    case profileImage(UIImage, Int)
 }
 
 extension AuthAPI: TargetType, UserProviderProtocol {
@@ -31,12 +32,14 @@ extension AuthAPI: TargetType, UserProviderProtocol {
             return "/auth/login"
         case .me:
             return "auth/me"
+        case .profileImage(_, let userID):
+            return "/user/\(userID)/profile_image"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .signup, .login:
+        case .signup, .login, .profileImage:
             return .post
         case .me:
             return .get
@@ -51,12 +54,21 @@ extension AuthAPI: TargetType, UserProviderProtocol {
             return .requestJSONEncodable(loginRequest)
         case .me:
             return .requestPlain
+        case .profileImage(let image, _):
+            let imageData = image.pngData() ?? Data()
+            let formData = MultipartFormData(
+                provider: .data(imageData),
+                name: "content",
+                fileName: "profile.png",
+                mimeType: "image/png"
+            )
+            return .uploadMultipart([formData])
         }
     }
     
     var headers: [String: String]? {
         switch self {
-        case .me:
+        case .me, .profileImage:
             if let accessToken = userProvider.accessToken {
                 return [
                     "Authorization": "Bearer \(accessToken)"
